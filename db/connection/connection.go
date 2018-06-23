@@ -1,7 +1,8 @@
 package connection
 
 import (
-	"github.com/Kerncheh/medium-api/db/pgoptions"
+	"Kerncheh/medium-api/db/pgoptions"
+
 	"github.com/go-pg/pg"
 )
 
