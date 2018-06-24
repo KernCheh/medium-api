@@ -15,6 +15,7 @@ func init() {
 			CREATE TABLE posts(
 				id integer primary key DEFAULT nextval('posts_id_seq'),
 				creator varchar(255) NOT NULL,
+				title varchar(255) NOT NULL,
 				content text,
 				created_at timestamp with time zone default now(),
 				updated_at timestamp with time zone

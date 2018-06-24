@@ -37,6 +37,7 @@ func Index(c *gin.Context) {
 }
 
 func Show(c *gin.Context) {
+	//TODO: Secure endpoint for unpublished posts
 	post := &models.Post{}
 
 	if err := connection.DBCon.Model(post).Where("id = ?", c.Param("id")).Select(); err == nil {
