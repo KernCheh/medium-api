@@ -14,15 +14,22 @@ import (
 
 func Index(c *gin.Context) {
 	pageString := c.DefaultQuery("page", "1")
+	showNotPublishedParam := c.DefaultQuery("shownotpublished", "false")
 	page, _ := strconv.Atoi(pageString)
 
-	var posts []models.Post
+	posts := make([]*models.Post, 0)
 
 	var pager = &orm.Pager{}
 	pager.Limit = 2
 	pager.SetPage(page)
 
-	if err := connection.DBCon.Model(&posts).Order("id asc").Apply(pager.Paginate).Select(); err == nil {
+	query := connection.DBCon.Model(&posts)
+
+	if showNotPublished, err := strconv.ParseBool(showNotPublishedParam); err != nil || !showNotPublished {
+		query = query.Where("published = ?", true)
+	}
+
+	if err := query.Order("id asc").Apply(pager.Paginate).Select(); err == nil {
 		c.JSON(http.StatusOK, posts)
 	} else {
 		RespondWithError(c, err)

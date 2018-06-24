@@ -30,6 +30,7 @@ func (m *BaseModel) BeforeUpdate(db orm.DB) error {
 
 type Post struct {
 	BaseModel
-	Creator string `sql:"type:varchar(255)" json:"creator" binding:"required"`
-	Content string `json:"content"`
+	Creator   string `sql:"type:varchar(255)" json:"creator" binding:"required"`
+	Content   string `json:"content"`
+	Published bool   `json:"published"`
 }

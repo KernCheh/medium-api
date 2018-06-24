@@ -1,4 +1,36 @@
-## Migrations
+## Setup
+
+1. Get dep
+    ```
+    brew install dep
+    ```
+
+1. Run:
+    ```
+    dep ensure
+    cd views
+    npm install
+    ```
+
+## Development
+
+### Backend
+
+To start:
+  ```
+  go run medium-api.go
+  ```
+
+### Frontend
+
+To start:
+
+  ```
+  cd views
+  npm run dev
+  ```
+
+## Migrations (taken from migration library)
 
 ```
 > createdb medium-api-dev
