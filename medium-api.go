@@ -8,6 +8,7 @@ import (
 	"Kerncheh/medium-api/controllers/posts"
 	"Kerncheh/medium-api/db/connection"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 )
@@ -19,6 +20,8 @@ func main() {
 	_, b, _, _ := runtime.Caller(0)
 	basepath := filepath.Dir(b)
 
+	router.Use(cors.Default())
+
 	router.Use(static.Serve("/", static.LocalFile(path.Join(basepath, "views", "dist"), true)))
 
 	router.GET("/ping", func(c *gin.Context) {
@@ -29,8 +32,8 @@ func main() {
 
 	v1 := router.Group("/api/v1/posts")
 	{
-		v1.GET("/", posts.Index)
-		v1.POST("/", posts.Create)
+		v1.GET("", posts.Index)
+		v1.POST("", posts.Create)
 
 		v1.PUT("/:id", posts.Update)
 		v1.PATCH("/:id", posts.Update)

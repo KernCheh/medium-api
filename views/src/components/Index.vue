@@ -16,9 +16,9 @@
     <section class="blogr-posts">
       <ul>
         <li v-for="post of posts">
-          <h3>Somem link</h3>
+          <h3>{{post.title}}</h3>
           <div class="desc">
-            <span>Last edited {{post.updated_at}} ago</span>
+            <span>Last edited {{post.UpdatedAt}} ago</span>
             <span class="dot">.</span>
             <!-- <%= link_to 'Edit', edit_blogr_post_path(post) %>
             <span class="dot">.</span>
@@ -74,6 +74,7 @@ export default {
     async fetchData() {
       let postService = new PostService()
       let posts = await postService.getPosts({showNotPublished: true})
+      this.posts = posts
 
       console.log(posts)
     }
