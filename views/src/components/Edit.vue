@@ -2,7 +2,7 @@
   <div class="">
     <form id="blogr-posts-form" class="blogr-form">
       <medium-editor :text='post.title' :options='titleOptions' v-on:edit="setTitle"/>
-      <medium-editor :text='post.content' :options="contentOptions" v-on:edit="setContent"/>
+      <medium-editor class="content-editor" :text='post.content' :options="contentOptions" v-on:edit="setContent"/>
 
       <button @click="saveData">Save</button>
     </form>
@@ -33,6 +33,20 @@ export default {
       contentOptions: {
         placeholder: {
           text: 'Tell your story...'
+        },
+        mode: 'rich',
+        	modifiers: {
+          'b': 'bold',
+          'i': 'italicize',
+          'u': 'underline',
+          'v': 'paste'
+        },
+        tags: {
+          'break': 'br',
+          'horizontalRule': 'hr',
+          'paragraph': 'p',
+          'outerLevel': ['pre', 'blockquote', 'figure'],
+          'innerLevel': ['a', 'b', 'u', 'i', 'img', 'strong']
         }
       }
     }
@@ -86,3 +100,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.content-editor {
+  min-height: 600px;
+}
+</style>

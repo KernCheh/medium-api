@@ -2,8 +2,10 @@
   <div class="blogr-index">
     <section class="posts-title cf container">
       <h1>Your posts</h1>
-      <router-link :to="'new'">Write a post</router-link>
-      <!-- <%= link_to 'Write a post', new_blogr_post_path(format: 'html'), remote: true %> -->
+      <br/>
+      <router-link :to="'new'" tag="button" class="btn btn-primary">Write a post</router-link>
+      <br/>
+      <br/>
     </section>
 
     <nav class="posts-nav container">
@@ -62,8 +64,6 @@ export default {
       let postService = new PostService()
       let posts = await postService.getPosts({showNotPublished: true})
       this.posts = posts
-
-      console.log(posts)
     }
   }
 }
