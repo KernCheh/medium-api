@@ -1,5 +1,10 @@
 ## Setup
 
+1. Install golang
+    ```
+    brew install go --cross-compile-common
+    ```
+
 1. Get dep
     ```
     brew install dep
@@ -35,17 +40,14 @@ To start:
 ```
 > createdb medium-api-dev
 
-> go run *.go version
+> go run db/migrations/*.go version
 version is 0
 
-> go run *.go
+> go run db/migrations/*.go
 creating table my_table...
 adding id column...
 seeding my_table...
 migrated from version 0 to 3
-
-> go run *.go version
-version is 3
 
 > go run *.go reset
 truncating my_table...
@@ -72,3 +74,8 @@ migrated from version 2 to 1
 > go run *.go create add email to users
 created migration 4_add_email_to_users.go
 ```
+
+## TODO
+
+1. Paginator front end
+2. Make the editor bigger

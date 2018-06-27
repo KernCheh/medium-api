@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/components/Index'
 import Edit from '@/components/Edit'
+import Show from '@/components/Show'
 
 Vue.use(Router)
 
@@ -20,7 +21,14 @@ export default new Router({
     {
       path: '/:id/edit',
       name: 'edit',
-      component: Edit
+      component: Edit,
+      props: true
+    },
+    {
+      path: '/:id',
+      name: 'show',
+      component: Show,
+      props: true
     }
   ]
 })

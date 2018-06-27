@@ -20,7 +20,7 @@ func Index(c *gin.Context) {
 	posts := make([]*models.Post, 0)
 
 	var pager = &orm.Pager{}
-	pager.Limit = 2
+	pager.Limit = 100
 	pager.SetPage(page)
 
 	query := connection.DBCon.Model(&posts)

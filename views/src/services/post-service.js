@@ -31,6 +31,15 @@ class PostService {
       console.error(e)
     }
   }
+
+  async updatePost(id, params) {
+    try {
+      let response = await this.client.post(`/${id}`, params)
+      return response.data
+    } catch (e) {
+      console.error(e)
+    }
+  }
 }
 
 export default PostService

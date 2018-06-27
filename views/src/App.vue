@@ -12,90 +12,90 @@ export default {
 
 <style lang="scss">
 .blogr {
-  font-family: sans-serif;
+//   font-family: sans-serif;
 
-  a {
-    border: none;
-  }
+//   a {
+//     border: none;
+//   }
 
-  .blogr-cont {
-    max-width: 960px;
-    width: 95%;
-    margin: 0 auto;
-  }
+//   .blogr-cont {
+//     max-width: 960px;
+//     width: 95%;
+//     margin: 0 auto;
+//   }
 
-  .posts-title {
-    h1 {
-      float: left;
-      font-size: 2.5em;
-      margin-bottom: 1em;
-    }
+//   .posts-title {
+//     h1 {
+//       float: left;
+//       font-size: 2.5em;
+//       margin-bottom: 1em;
+//     }
 
-    a {
-      float: right;
-      display: inline-block;
-      color: #CE0A0A;
-      border: 1px solid;
-      border-radius: 2em;
-      padding: .5em 1.4em;
-      margin-top: 1em;
-    }
-  }
+//     a {
+//       float: right;
+//       display: inline-block;
+//       color: #CE0A0A;
+//       border: 1px solid;
+//       border-radius: 2em;
+//       padding: .5em 1.4em;
+//       margin-top: 1em;
+//     }
+//   }
 
-  .posts-nav {
-    border-top: 1px solid #ddd;
-    margin-bottom: 2em;
+//   .posts-nav {
+//     border-top: 1px solid #ddd;
+//     margin-bottom: 2em;
 
-    li {
-      display: inline-block;
-      line-height: 5;
-      text-transform: uppercase;
-      font-size: .8em;
-      letter-spacing: 2px;
-      font-weight: 700;
-      margin-right: 2em;
-      margin-top: -1px;
-      color: #222;
-    }
+//     li {
+//       display: inline-block;
+//       line-height: 5;
+//       text-transform: uppercase;
+//       font-size: .8em;
+//       letter-spacing: 2px;
+//       font-weight: 700;
+//       margin-right: 2em;
+//       margin-top: -1px;
+//       color: #222;
+//     }
 
-    span {
-      display: block;
-      border-top: 1px solid #666;
-    }
+//     span {
+//       display: block;
+//       border-top: 1px solid #666;
+//     }
 
-    a {
-      color: #999;
-    }
-  }
+//     a {
+//       color: #999;
+//     }
+//   }
 
-  .blogr-posts {
-    .summary {
-      margin-bottom: 3em;
+//   .blogr-posts {
+//     .summary {
+//       margin-bottom: 3em;
 
-      h3 {
-        a {
-          font-family: serif;
-          font-size: 2em;
-          color: #222;
-        }
-      }
+//       h3 {
+//         a {
+//           font-family: serif;
+//           font-size: 2em;
+//           color: #222;
+//         }
+//       }
 
-      .desc {
-        color: #aaa;
+//       .desc {
+//         color: #aaa;
 
-        a {
-          color: #aaa;
-        }
-      }
+//         a {
+//           color: #aaa;
+//         }
+//       }
 
-      .dot {
-        position: relative;
-        top: -.2em;
-        display: inline-block;
-        padding: 0 .3em;
-      }
-    }
-  }
+//       .dot {
+//         position: relative;
+//         top: -.2em;
+//         display: inline-block;
+//         padding: 0 .3em;
+//       }
+//     }
+//   }
 
   .blogr-form {
     font-family: serif;
@@ -118,55 +118,55 @@ export default {
   }
 }
 
-@-webkit-keyframes medium-editor-image-loading {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0); }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
+// @-webkit-keyframes medium-editor-image-loading {
+//   0% {
+//     -webkit-transform: scale(0);
+//             transform: scale(0); }
+//   100% {
+//     -webkit-transform: scale(1);
+//             transform: scale(1); } }
 
-@keyframes medium-editor-image-loading {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0); }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
+// @keyframes medium-editor-image-loading {
+//   0% {
+//     -webkit-transform: scale(0);
+//             transform: scale(0); }
+//   100% {
+//     -webkit-transform: scale(1);
+//             transform: scale(1); } }
 
-@-webkit-keyframes medium-editor-pop-upwards {
-  0% {
-    opacity: 0;
-    -webkit-transform: matrix(0.97, 0, 0, 1, 0, 12);
-            transform: matrix(0.97, 0, 0, 1, 0, 12); }
-  20% {
-    opacity: .7;
-    -webkit-transform: matrix(0.99, 0, 0, 1, 0, 2);
-            transform: matrix(0.99, 0, 0, 1, 0, 2); }
-  40% {
-    opacity: 1;
-    -webkit-transform: matrix(1, 0, 0, 1, 0, -1);
-            transform: matrix(1, 0, 0, 1, 0, -1); }
-  100% {
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-            transform: matrix(1, 0, 0, 1, 0, 0); } }
+// @-webkit-keyframes medium-editor-pop-upwards {
+//   0% {
+//     opacity: 0;
+//     -webkit-transform: matrix(0.97, 0, 0, 1, 0, 12);
+//             transform: matrix(0.97, 0, 0, 1, 0, 12); }
+//   20% {
+//     opacity: .7;
+//     -webkit-transform: matrix(0.99, 0, 0, 1, 0, 2);
+//             transform: matrix(0.99, 0, 0, 1, 0, 2); }
+//   40% {
+//     opacity: 1;
+//     -webkit-transform: matrix(1, 0, 0, 1, 0, -1);
+//             transform: matrix(1, 0, 0, 1, 0, -1); }
+//   100% {
+//     -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+//             transform: matrix(1, 0, 0, 1, 0, 0); } }
 
-@keyframes medium-editor-pop-upwards {
-  0% {
-    opacity: 0;
-    -webkit-transform: matrix(0.97, 0, 0, 1, 0, 12);
-            transform: matrix(0.97, 0, 0, 1, 0, 12); }
-  20% {
-    opacity: .7;
-    -webkit-transform: matrix(0.99, 0, 0, 1, 0, 2);
-            transform: matrix(0.99, 0, 0, 1, 0, 2); }
-  40% {
-    opacity: 1;
-    -webkit-transform: matrix(1, 0, 0, 1, 0, -1);
-            transform: matrix(1, 0, 0, 1, 0, -1); }
-  100% {
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-            transform: matrix(1, 0, 0, 1, 0, 0); } }
+// @keyframes medium-editor-pop-upwards {
+//   0% {
+//     opacity: 0;
+//     -webkit-transform: matrix(0.97, 0, 0, 1, 0, 12);
+//             transform: matrix(0.97, 0, 0, 1, 0, 12); }
+//   20% {
+//     opacity: .7;
+//     -webkit-transform: matrix(0.99, 0, 0, 1, 0, 2);
+//             transform: matrix(0.99, 0, 0, 1, 0, 2); }
+//   40% {
+//     opacity: 1;
+//     -webkit-transform: matrix(1, 0, 0, 1, 0, -1);
+//             transform: matrix(1, 0, 0, 1, 0, -1); }
+//   100% {
+//     -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+//             transform: matrix(1, 0, 0, 1, 0, 0); } }
 
 // Medium editor
 .medium-editor-anchor-preview {

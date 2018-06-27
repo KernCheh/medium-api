@@ -4,14 +4,18 @@
       <medium-editor :text='post.title' :options='titleOptions' v-on:edit="setTitle"/>
       <medium-editor :text='post.content' :options="contentOptions" v-on:edit="setContent"/>
 
-      <button :click="saveData">Save</button>
+      <button @click="saveData">Save</button>
     </form>
   </div>
 </template>
 
 <script>
+import PostService from '../services/post-service.js'
+
 export default {
   name: 'edit',
+
+  props: ['id'],
 
   data() {
     return {
@@ -51,21 +55,33 @@ export default {
       this.post.content = operation.api.origElements.innerHTML
     },
 
-    fetchData() {
-      if (this.$route.name === 'edit') {
+    async fetchData() {
+      if (this.id) {
+        let postService = new PostService()
+        let result = await postService.getPost(this.id)
 
+        this.post.title = result.title
+        this.post.content = result.content
       }
     },
 
     async saveData() {
       let postService = new PostService()
-      let result = await postService.newPost({
-        title: post.title,
-        content: post.content,
-        creator: 'Me'
-      })
+      if (this.id) {
+        let result = await postService.updatePost(this.id, {
+          title: this.post.title,
+          content: this.post.content,
+          creator: 'Me'
+        })
+      } else {
+        let result = await postService.newPost({
+          title: this.post.title,
+          content: this.post.content,
+          creator: 'Me'
+        })
+      }
 
-      console.log(result)
+      this.$router.push({name: 'index'})
     }
   }
 }
