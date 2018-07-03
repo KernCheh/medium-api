@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"Kerncheh/medium-api/controllers/posts"
-	"Kerncheh/medium-api/db/connection"
+	"medium-api/controllers/posts"
+	"medium-api/db/connection"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-contrib/static"

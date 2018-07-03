@@ -3,7 +3,7 @@ package pgoptions
 import (
 	"log"
 
-	"Kerncheh/medium-api/config"
+	"medium-api/config"
 
 	"github.com/go-pg/pg"
 )

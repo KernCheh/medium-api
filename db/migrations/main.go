@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"Kerncheh/medium-api/db/pgoptions"
+	"medium-api/db/pgoptions"
 
 	"github.com/go-pg/migrations"
 	"github.com/go-pg/pg"

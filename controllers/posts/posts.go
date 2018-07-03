@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"Kerncheh/medium-api/db/connection"
+	"medium-api/db/connection"
 
-	"Kerncheh/medium-api/models"
+	"medium-api/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-pg/pg/orm"
